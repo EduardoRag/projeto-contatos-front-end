@@ -1,0 +1,12 @@
+.main-content-div {
+    margin: 255px 242px;
+}
+
+.add-btn {
+    width: 235px;
+    height: 51px;
+
+    border-radius: 8px;
+
+    margin-bottom: 32px;
+}

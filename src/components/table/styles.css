@@ -1,0 +1,15 @@
+.table-head {
+    height: 46px;
+
+    margin-bottom: 24px;
+
+    background-color: #F4F0F0;
+}
+
+.trash-icon {
+    cursor: pointer;
+}
+
+.trash-icon:hover {
+    transform: scale(130%);
+}

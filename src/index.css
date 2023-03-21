@@ -1,13 +1,130 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content-div {
+  display: flex;
+  align-items: center;
+
+  height: 100vh;
+
+}
+
+.content-div>img {
+  width: 50%;
+  height: 100%;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0px 121px;
+
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 32px;
+}
+
+input {
+  height: 51px;
+
+  padding: 16px;
+
+  border: 1px solid #E8E8E8;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+form p {
+  display: none;
+  margin-left: 16px;
+
+  color: red;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+}
+
+form>input {
+  background-color: rgba(243, 175, 49, 0.116);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #04C45C;
+  color: #FFFFFF;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  cursor: pointer;
+}
+
+p {
+  margin-top: 96px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+
+  color: #000000;
+}
+
+.notification {
+  text-align: center;
+  font-family: 'Roboto';
+  margin-top: -37px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: rgb(19, 243, 19);
+}
+
+.error {
+  color: red;
 }
