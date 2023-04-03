@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://contacts-api-cubos.herokuapp.com',
+    baseURL: 'https://api-contacts.pedagogico.cubos.academy',
     timeout: 10000,
     headers: { 'Content-Type': 'application/json' }
 });

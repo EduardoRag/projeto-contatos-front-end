@@ -4,7 +4,7 @@ const registerSubmitHandle = async (e, dataForm, send, error, navigate) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (!dataForm.name || !dataForm.email || !dataForm.password) {
+    if (!dataForm.nome || !dataForm.email || !dataForm.senha) {
         send(true);
         error('Todos os campos devem ser preenchidos');
 
@@ -16,7 +16,7 @@ const registerSubmitHandle = async (e, dataForm, send, error, navigate) => {
         return
     }
 
-    if (dataForm.password.length < 5) {
+    if (dataForm.senha.length < 5) {
         send(true);
         error('A senha precisa conter mais de 5 caracteres');
 
@@ -25,11 +25,11 @@ const registerSubmitHandle = async (e, dataForm, send, error, navigate) => {
             error('');
         }, 2000);
 
-        return
+        return;
     }
 
     try {
-        const response = await api.post('/usuarios', { dataForm });
+        await api.post('/usuarios', { ...dataForm });
 
         send(true);
         setTimeout(() => {

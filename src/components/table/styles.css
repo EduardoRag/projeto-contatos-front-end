@@ -6,10 +6,18 @@
     background-color: #F4F0F0;
 }
 
-.trash-icon {
+.icon-divs>img {
     cursor: pointer;
 }
 
-.trash-icon:hover {
+.icon-divs>img:hover {
     transform: scale(130%);
+}
+
+.icon-divs {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 18px;
+    gap: 17px;
 }

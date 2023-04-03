@@ -3,26 +3,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import RegisterPageImage from '../../assets/register-page.png';
 import registerSubmitHandle from '../../functions/registerSubmitHandle';
+import useFormContext from '../../hooks/useFormContext';
 
 const RegisterPage = () => {
+    const { error, setError, send, setSend } = useFormContext();
     const navigate = useNavigate();
-    const [registerForm, SetRegisterFrom] = useState({
-        name: '',
+    const [registerForm, SetRegisterForm] = useState({
+        nome: '',
         email: '',
-        password: ''
+        senha: ''
     });
-    const [error, setError] = useState('');
-    const [send, setSend] = useState(false);
 
     const onChangeFormHandle = (e) => {
-        SetRegisterFrom({ ...registerForm, [e.target.name]: e.target.value });
+        SetRegisterForm({ ...registerForm, [e.target.name]: e.target.value });
     }
 
     const cancelHandleBtn = () => {
-        SetRegisterFrom({
-            name: '',
+        SetRegisterForm({
+            nome: '',
             email: '',
-            password: ''
+            senha: ''
         });
 
         navigate('/');
@@ -37,7 +37,7 @@ const RegisterPage = () => {
                 >
                     <input
                         type='text'
-                        name='name'
+                        name='nome'
                         placeholder='Nome'
                         value={registerForm.nome}
                         required
@@ -53,9 +53,9 @@ const RegisterPage = () => {
                     />
                     <input
                         type='password'
-                        name='password'
+                        name='senha'
                         placeholder='Senha'
-                        value={registerForm.password}
+                        value={registerForm.senha}
                         required
                         onChange={(e) => onChangeFormHandle(e)}
                     />
